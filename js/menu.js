@@ -2,8 +2,7 @@
  * SİMA - QR Restoran Menüsü Veri & Yönetim Sistemi
  * 
  * Bu dosya menüdeki tüm ürünleri, 4 ana kategoriyi ve restoran bilgilerini barındırır.
- * Yeni ürün eklemek, fiyatları değiştirmek veya görselleri güncellemek için
- * aşağıdaki `menuData` objesini düzenlemeniz yeterlidir.
+ * Fiyatları, ürün isimlerini, açıklamaları ve fotoğrafları bu dosyadan kolayca güncelleyebilirsiniz.
  */
 
 // ==========================================
@@ -13,7 +12,7 @@ const restaurantInfo = {
   name: "SİMA",
   tagline: "FIRIN • PİDE • IZGARA",
   slogan: "Lezzetin her hali, SİMA'da.",
-  noteTopRight: "İyi Yemek Güzel İnsanları Buluşturur.",
+  noteTopRight: "İyi Yemek\nGüzel İnsanları\nBuluşturur.",
   subNote: "Taş Fırının Eşsiz Lezzeti"
 };
 
@@ -43,46 +42,47 @@ const categories = [
     id: "icecekler",
     name: "İçecekler",
     icon: "🥤",
-    subtitle: "Yemeklerin yanına eşlik eden ferahlatıcı içecekler."
+    subtitle: "Yemeklerin yanına ferahlatıcı içecekler."
   }
 ];
 
 // ==========================================
-// 3. MERKEZİ ÜRÜN VERİ YAPISI (menuData)
+// 3. MERKEZİ ÜRÜN VERİ YAPISI (Tahmini Fiyatlar & Örnek Görseller)
 // ==========================================
-// Fiyatlar şimdilik varsayılan olarak "-- TL" dir.
-// Gerçek menü geldiğinde `price` alanına örn. "140 TL" yazabilirsiniz.
+// NOT: Aşağıdaki fiyatlar ve görseller şimdilik tahmini/örnek olarak eklenmiştir.
+// Gerçek menü geldiğinde fiyatları (örn. "30 TL") ve görsel yollarını (örn. "images/simit.jpg")
+// doğrudan buradan değiştirebilirsiniz.
 const menuData = {
   // 1. TAŞ FIRINDAN
   tasFirindan: [
     {
       name: "Simit",
-      description: "Geleneksel lezzet, taş fırından günlük taze.",
-      price: "-- TL",
+      description: "Geleneksel lezzet, taş fırından.",
+      price: "25 TL",
       image: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Kaşarlı Simit",
       description: "Bol kaşar ile fırında özel lezzet.",
-      price: "-- TL",
+      price: "55 TL",
       image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Karışık Simit",
-      description: "Susam, çörekotu ve zengin tohum harmanı.",
-      price: "-- TL",
+      description: "Susam, çörekotu ve daha fazlası.",
+      price: "50 TL",
       image: "https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Tereyağlı Simit",
-      description: "Halis köy tereyağı lezzetiyle fırından yeni çıkmış.",
-      price: "-- TL",
+      description: "Mis gibi tereyağı ile.",
+      price: "45 TL",
       image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Poğaça ve Çeşitleri",
-      description: "Her damak tadına uygun, peynirli, zeytinli ve sade günlük taze.",
-      price: "-- TL",
+      description: "Her damak tadına uygun, günlük taze.",
+      price: "35 TL",
       image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80"
     }
   ],
@@ -91,32 +91,32 @@ const menuData = {
   aspava: [
     {
       name: "Pide",
-      description: "Taş fırında taze pişen kıymalı ve kaşarlı çıtır pide.",
-      price: "-- TL",
+      description: "Taş fırında pişen çıtır kıymalı ve kaşarlı pide.",
+      price: "280 TL",
       image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Lahmacun",
-      description: "Özel zırh kıyması, ince çıtır hamur, yeşillik ve limon ile.",
-      price: "-- TL",
+      description: "İnce çıtır hamur, zırh kıyması, yeşillik ve limon ile.",
+      price: "110 TL",
       image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Adana",
-      description: "Köz ateşinde usta ellerden çıkan zırh kıyması kebabı.",
-      price: "-- TL",
+      description: "Közde pişen nefis zırh kıyması kebabı, köz sebzelerle.",
+      price: "380 TL",
       image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Kanat",
-      description: "Özel marineli, köz ateşinde nar gibi kızarmış tavuk kanat.",
-      price: "-- TL",
+      description: "Özel marineli közde ızgara tavuk kanat.",
+      price: "320 TL",
       image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Köfte",
-      description: "Özel kasap baharat harmanıyla hazırlanan ızgara köfte.",
-      price: "-- TL",
+      description: "Geleneksel lezzette zırh kasap köftesi.",
+      price: "340 TL",
       image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=400&q=80"
     }
   ],
@@ -125,8 +125,8 @@ const menuData = {
   tatli: [
     {
       name: "Künefe",
-      description: "Sıcak şerbetli, halis tuzsuz peynirli ve bol Antep fıstıklı çıtır künefe.",
-      price: "-- TL",
+      description: "Sıcak şerbetli, halis peynirli ve bol Antep fıstıklı.",
+      price: "180 TL",
       image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=80"
     }
   ],
@@ -135,38 +135,38 @@ const menuData = {
   icecekler: [
     {
       name: "Kola",
-      description: "Soğuk kutu kola.",
-      price: "-- TL",
+      description: "Soğuk kutu meşrubat.",
+      price: "55 TL",
       image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Fanta",
       description: "Soğuk kutu portakallı gazoz.",
-      price: "-- TL",
+      price: "55 TL",
       image: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Ayran",
-      description: "Bol köpüklü, taze yayık ayranı.",
-      price: "-- TL",
+      description: "Bol köpüklü taze yayık ayranı.",
+      price: "40 TL",
       image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Fuse Tea",
-      description: "Soğuk ferahlatıcı buzlu şeftali / limon çay.",
-      price: "-- TL",
+      description: "Soğuk ferahlatıcı şeftali / limon buzlu çay.",
+      price: "55 TL",
       image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Soda",
       description: "Doğal zengin mineralli maden suyu.",
-      price: "-- TL",
+      price: "35 TL",
       image: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Su",
       description: "Doğal kaynak suyu.",
-      price: "-- TL",
+      price: "20 TL",
       image: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=400&q=80"
     }
   ]
@@ -199,7 +199,9 @@ function initHeaderAndFooter() {
   if (brandName) brandName.textContent = restaurantInfo.name;
   if (brandTagline) brandTagline.textContent = restaurantInfo.tagline;
   if (sloganText) sloganText.textContent = restaurantInfo.slogan;
-  if (noteTopRight) noteTopRight.textContent = restaurantInfo.noteTopRight;
+  if (noteTopRight) {
+    noteTopRight.innerHTML = restaurantInfo.noteTopRight.replace(/\n/g, "<br>");
+  }
 
   if (footerBrand) footerBrand.textContent = restaurantInfo.name;
   if (footerTagline) footerTagline.textContent = restaurantInfo.tagline;
@@ -288,9 +290,6 @@ function renderAllSections() {
         </div>
         <div class="product-price-box">
           <span class="product-price">${product.price}</span>
-          <svg class="price-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
         </div>
       `;
 

@@ -3,23 +3,23 @@
    (Geleneksel Fırın & Aspava Sıcak Restoran Konsepti)
    =================================================== */
 
-/* 1. CSS Değişkenleri & Renk Paleti */
+/* 1. Renk Paleti & Değişkenler */
 :root {
-  --bg-page: #f2ece1;
+  --bg-page: #f1ebd8;
   --bg-app: #fbf7f0;
   --bg-card: #ffffff;
-  --bg-pill-price: #fcf4e8;
+  --bg-pill-price: #fdf5ea;
   
-  --text-dark: #2a170e;       /* Koyu sıcak kahve / antrasit */
-  --text-tagline: #5c4738;    /* Orta ton kahve */
-  --text-muted: #756658;      /* Açıklama gri/kahve */
-  --text-script: #bd521e;     /* Sıcak terakota / köz turuncusu */
-  --text-note: #8a7b6e;       /* Sağ üst el yazısı notu */
+  --text-dark: #24140c;       /* Derin sıcak espresso kahve */
+  --text-tagline: #4e3b2e;    /* Orta kahve tonu */
+  --text-muted: #6e5e52;      /* Açıklama yazıları */
+  --text-script: #b64913;     /* Sıcak terakota / köz kızıllığı */
+  --text-note: #7d695b;       /* Sağ üstteki samimi not */
 
-  --accent-copper: #c05621;
-  --border-light: #e5dacb;
+  --accent-copper: #b44610;
+  --border-light: #e4d7c6;
   --border-card: #eee4d5;
-  --border-price: #f5dfc3;
+  --border-price: #f6ddc1;
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -52,9 +52,10 @@ body {
   color: var(--text-dark);
   line-height: 1.45;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* 3. Ana Mobil Kapsayıcı (App Frame) */
+/* 3. Ana Mobil Çerçeve (App Frame) */
 .app-container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -63,46 +64,41 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 0 35px rgba(42, 23, 14, 0.08);
+  box-shadow: 0 0 45px rgba(36, 20, 12, 0.12);
 }
 
 /* 4. Başlık Bölümü (Header) */
 .header {
   position: relative;
-  padding: 24px 20px 18px 20px;
+  padding: 22px 18px 16px 18px;
   text-align: center;
-  background: radial-gradient(circle at 50% 30%, #ffffff 0%, var(--bg-app) 100%);
+  background: radial-gradient(circle at 50% 15%, #ffffff 0%, var(--bg-app) 100%);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
 }
 
-/* Üst Arka Plan Zarif Botanik Çizgileri */
-.header-decor {
+/* Köşe Botanik Yaprak Süslemeleri */
+.decor-branch {
   position: absolute;
   top: 0;
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   pointer-events: none;
-  opacity: 0.12;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .decor-left {
   left: 0;
-  background-image: radial-gradient(circle at top left, #5c4738 10%, transparent 60%);
 }
 
 .decor-right {
   right: 0;
-  background-image: radial-gradient(circle at top right, #5c4738 10%, transparent 60%);
 }
 
-/* Sağ Üstteki Samimi El Yazısı */
+/* Sağ Üstteki Samimi El Yazısı Notu */
 .header-top-row {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .note-script {
@@ -111,9 +107,9 @@ body {
   font-weight: 700;
   color: var(--text-note);
   line-height: 1.15;
-  max-width: 140px;
   text-align: right;
-  transform: rotate(-2deg);
+  transform: rotate(-3deg);
+  letter-spacing: 0.2px;
 }
 
 /* Marka Logo & Başlık Grubu */
@@ -123,12 +119,12 @@ body {
 
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: 3.1rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   color: var(--text-dark);
   line-height: 1;
-  margin-left: 0.22em; /* Harf aralığı kaynaklı sağa kaymayı dengeler */
+  margin-left: 0.18em; /* Harf aralığı kaynaklı sağa kaymayı dengeler */
 }
 
 .tagline-row {
@@ -136,29 +132,29 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .tagline-line {
   height: 1px;
-  width: 38px;
+  width: 44px;
   background-color: var(--border-light);
 }
 
 .brand-tagline {
   font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   color: var(--text-tagline);
   text-transform: uppercase;
 }
 
 .slogan-script {
   font-family: var(--font-script);
-  font-size: 1.55rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: var(--text-script);
-  margin-top: 8px;
+  margin-top: 6px;
   letter-spacing: 0.5px;
 }
 
@@ -167,61 +163,64 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: rgba(251, 247, 240, 0.97);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(251, 247, 240, 0.98);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 10px 14px;
   border-bottom: 1px solid var(--border-light);
-  box-shadow: 0 2px 10px rgba(42, 23, 14, 0.04);
+  box-shadow: 0 2px 10px rgba(36, 20, 12, 0.04);
 }
 
 .category-nav {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
   align-items: center;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.category-nav::-webkit-scrollbar {
-  display: none;
 }
 
 .category-pill {
-  flex: 1 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 8px 12px;
+  gap: 5px;
+  padding: 8px 4px;
   border-radius: var(--radius-card);
-  border: 1px solid #e8dfd2;
+  border: 1px solid #e7ded1;
   background-color: #ffffff;
-  color: #3d2b20;
+  color: #38251b;
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.79rem;
   font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(42, 23, 14, 0.03);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(36, 20, 12, 0.03);
 }
 
 .category-pill .category-icon {
   font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.category-pill .category-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-pill:active {
+  transform: scale(0.97);
 }
 
 .category-pill.active {
-  background-color: #352016;
-  border-color: #352016;
+  background-color: #2b170e;
+  border-color: #2b170e;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(53, 32, 22, 0.25);
+  box-shadow: 0 4px 12px rgba(43, 23, 14, 0.26);
 }
 
 /* 6. Menü İçerik Alanı & Kategori Bölümleri */
 .menu-container {
-  padding: 16px 14px 28px 14px;
+  padding: 16px 14px 24px 14px;
   flex: 1;
 }
 
@@ -255,7 +254,7 @@ body {
 .category-sub-row {
   display: flex;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .cat-subtitle {
@@ -271,7 +270,7 @@ body {
   margin-left: 12px;
 }
 
-/* 7. Temiz & Zarif Ürün Kartları */
+/* 7. Zarif & İştah Açıcı Ürün Kartları */
 .products-list {
   display: flex;
   flex-direction: column;
@@ -284,24 +283,20 @@ body {
   background-color: var(--bg-card);
   border-radius: var(--radius-card);
   border: 1px solid var(--border-card);
-  padding: 8px 10px;
+  padding: 10px 12px;
   gap: 12px;
-  box-shadow: 0 1px 4px rgba(42, 23, 14, 0.03);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(36, 20, 12, 0.04);
 }
 
-.product-card:active {
-  transform: scale(0.99);
-}
-
-/* Ürün Görseli */
+/* Ürün Fotoğrafı */
 .product-image-box {
-  width: 90px;
-  height: 68px;
+  width: 94px;
+  height: 74px;
   flex-shrink: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
-  background-color: #f7f3ec;
+  background-color: #f5eee4;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .product-img {
@@ -311,7 +306,7 @@ body {
   display: block;
 }
 
-/* Ürün Bilgisi (Ad + Açıklama) */
+/* Ürün Başlığı & Açıklaması */
 .product-info {
   flex: 1;
   min-width: 0;
@@ -319,7 +314,7 @@ body {
 
 .product-name {
   font-family: var(--font-serif);
-  font-size: 0.98rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.25;
@@ -327,7 +322,7 @@ body {
 }
 
 .product-desc {
-  font-size: 0.77rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   line-height: 1.35;
   display: -webkit-box;
@@ -336,75 +331,84 @@ body {
   overflow: hidden;
 }
 
-/* Fiyat Alanı (Pill Badge + Chevron Ok) */
+/* Fiyat Alanı (Net, Belirgin ve Yaşlı Dostu Büyük Menü Fiyatı) */
 .product-price-box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 3px;
-  background-color: var(--bg-pill-price);
-  border: 1px solid var(--border-price);
-  padding: 5px 9px;
-  border-radius: var(--radius-full);
+  justify-content: flex-end;
   flex-shrink: 0;
+  padding-left: 6px;
+  user-select: none;
 }
 
 .product-price {
-  font-size: 0.88rem;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: 1.25rem; /* Yaşlılar ve tüm müşteriler için büyük ve anında fark edilir */
+  font-weight: 800;
   color: var(--accent-copper);
-  letter-spacing: 0.3px;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  line-height: 1;
 }
 
-.price-chevron {
-  width: 12px;
-  height: 12px;
-  color: var(--accent-copper);
-}
-
-/* 8. Taş Fırın Görsel Vurgu Alanı (Mockup Tabanı) */
+/* 8. Taş Fırın Görsel Vurgu Alanı (Referans Mockup İmzası) */
 .oven-banner {
   position: relative;
-  height: 140px;
+  height: 145px;
   margin: 10px 14px 20px 14px;
   border-radius: var(--radius-card);
   overflow: hidden;
   background: 
-    linear-gradient(180deg, rgba(251, 247, 240, 0.3) 0%, rgba(42, 23, 14, 0.65) 100%),
-    url("https://images.unsplash.com/photo-1579684947550-22e945225d9a?auto=format&fit=crop&w=600&q=80") center/cover no-repeat;
+    linear-gradient(180deg, rgba(251, 247, 240, 0.25) 0%, rgba(36, 20, 12, 0.72) 100%),
+    url("https://images.unsplash.com/photo-1579684947550-22e945225d9a?auto=format&fit=crop&w=700&q=80") center/cover no-repeat;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 14px 16px;
+  padding: 14px 18px;
+  box-shadow: 0 3px 12px rgba(36, 20, 12, 0.08);
 }
 
 .oven-bg-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at bottom right, rgba(192, 86, 33, 0.3) 0%, transparent 60%);
+  background: radial-gradient(circle at bottom right, rgba(182, 73, 19, 0.35) 0%, transparent 60%);
 }
 
 .oven-banner-text {
   position: relative;
   z-index: 2;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .oven-script {
   font-family: var(--font-script);
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 700;
   color: #fff4ea;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
   line-height: 1.1;
   display: block;
+}
+
+.oven-underline {
+  display: block;
+  width: 46px;
+  height: 2px;
+  background: #f7a072;
+  margin-top: 4px;
+  border-radius: 2px;
+  opacity: 0.85;
 }
 
 /* 9. Sadeleştirilmiş Alt Bölüm (Footer) */
 .footer {
   text-align: center;
-  padding: 30px 20px calc(32px + env(safe-area-inset-bottom));
+  padding: 30px 20px calc(34px + env(safe-area-inset-bottom));
   border-top: 1px solid var(--border-light);
-  background: linear-gradient(180deg, var(--bg-app) 0%, #f4ede3 100%);
+  background: linear-gradient(180deg, var(--bg-app) 0%, #f3ece0 100%);
 }
 
 .footer-brand {
@@ -419,7 +423,7 @@ body {
 .footer-tagline {
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent-copper);
   margin-top: 4px;

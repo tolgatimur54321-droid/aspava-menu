@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>SİMA - FIRIN • PİDE • IZGARA | Menü</title>
-  <meta name="description" content="SİMA QR Menü. Taş Fırından taze lezzetler, Aspava, tatlı ve içecek çeşitleri.">
-  <meta name="theme-color" content="#331f17">
+  <meta name="description" content="SİMA QR Menü. Taş Fırından taze lezzetler, Aspava kebapları, tatlı ve içecek çeşitleri.">
+  <meta name="theme-color" content="#2b170e">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/placeholder.svg">
 
-  <!-- Google Fonts: Playfair Display (Başlıklar) + Plus Jakarta Sans (Gövde) + Caveat (Zarif El Yazısı) -->
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans + Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,16 +24,31 @@
     
     <!-- 1. ÜST BAŞLIK BÖLÜMÜ (Header) -->
     <header class="header">
-      <!-- Arka Plan Zarif Botanik Süslemeleri -->
-      <div class="header-decor decor-left"></div>
-      <div class="header-decor decor-right"></div>
+      <!-- Zarif Botanik Yaprak Çizimleri (Köşe Vurguları) -->
+      <svg class="decor-branch decor-left" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,90 Q40,40 90,10" stroke="#4a3528" stroke-width="1.8" opacity="0.15" stroke-linecap="round"/>
+        <path d="M30,70 C22,60 26,50 36,54 C40,64 36,70 30,70 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M50,50 C44,40 50,32 58,38 C60,48 56,54 50,50 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M72,30 C68,20 76,14 84,22 C84,30 78,34 72,30 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M42,66 C48,60 56,64 54,72 C46,76 40,72 42,66 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M64,44 C70,38 78,42 76,50 C68,54 62,50 64,44 Z" fill="#4a3528" opacity="0.12"/>
+      </svg>
+
+      <svg class="decor-branch decor-right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90,90 Q60,40 10,10" stroke="#4a3528" stroke-width="1.8" opacity="0.15" stroke-linecap="round"/>
+        <path d="M70,70 C78,60 74,50 64,54 C60,64 64,70 70,70 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M50,50 C56,40 50,32 42,38 C40,48 44,54 50,50 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M28,30 C32,20 24,14 16,22 C16,30 22,34 28,30 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M58,66 C52,60 44,64 46,72 C54,76 60,72 58,66 Z" fill="#4a3528" opacity="0.12"/>
+        <path d="M36,44 C30,38 22,42 24,50 C32,54 38,50 36,44 Z" fill="#4a3528" opacity="0.12"/>
+      </svg>
 
       <!-- Sağ Üst El Yazısı Notu -->
       <div class="header-top-row">
-        <div class="note-script" id="note-top-right">İyi Yemek Güzel İnsanları Buluşturur.</div>
+        <div class="note-script" id="note-top-right">İyi Yemek<br>Güzel İnsanları<br>Buluşturur.</div>
       </div>
 
-      <!-- Logo & Marka -->
+      <!-- Marka Başlığı & Slogan -->
       <div class="brand-wrap">
         <h1 class="brand-title" id="brand-name">SİMA</h1>
         
@@ -50,20 +65,21 @@
     <!-- 2. YAPIŞKAN (STICKY) 4 KATEGORİ ÇUBUĞU -->
     <div class="sticky-nav-wrapper">
       <nav id="category-nav" class="category-nav" aria-label="Menü Kategorileri">
-        <!-- JavaScript ile 4 kategori dinamik yüklenecektir -->
+        <!-- JavaScript ile dinamik olarak 4 kategori yüklenecektir -->
       </nav>
     </div>
 
-    <!-- 3. MENÜ İÇERİĞİ -->
+    <!-- 3. MENÜ İÇERİĞİ (Kategoriler & Ürün Kartları) -->
     <main id="menu-container" class="menu-container">
-      <!-- JavaScript ile 4 kategori ve ürünler dinamik yüklenecektir -->
+      <!-- JavaScript ile dinamik olarak doldurulacaktır -->
     </main>
 
-    <!-- 4. TAŞ FIRIN VURGUSU & SÜSLEME ALANI -->
+    <!-- 4. TAŞ FIRIN GÖRSEL VURGUSU & SÜSLEME ALANI -->
     <div class="oven-banner">
       <div class="oven-bg-overlay"></div>
       <div class="oven-banner-text">
         <span class="oven-script">Taş Fırının<br>Eşsiz Lezzeti</span>
+        <span class="oven-underline"></span>
       </div>
     </div>
 
