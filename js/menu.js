@@ -1,7 +1,7 @@
 /**
  * SİMA - QR Restoran Menüsü Veri & Yönetim Sistemi
  * 
- * Bu dosya menüdeki tüm ürünleri, 4 ana kategoriyi ve restoran bilgilerini barındırır.
+ * Bu dosya menüdeki tüm ürünleri, kategorileri ve restoran bilgilerini barındırır.
  * Fiyatları, ürün isimlerini, açıklamaları ve fotoğrafları bu dosyadan kolayca güncelleyebilirsiniz.
  */
 
@@ -17,47 +17,56 @@ const restaurantInfo = {
 };
 
 // ==========================================
-// 2. KATEGORİLER (Sadece 4 Ana Kategori)
+// 2. KATEGORİLER
 // ==========================================
 const categories = [
   {
     id: "tasFirindan",
     name: "Taş Fırından",
     icon: "🌾",
-    subtitle: "Taş fırından taze çıkan günlük lezzetler."
+    subtitle: "Taş fırından taze çıkan günlük unlu mamuller."
   },
   {
-    id: "aspava",
-    name: "Aspava",
-    icon: "🔥",
-    subtitle: "Köz ateşinde usta ellerden çıkan lezzetler."
+    id: "kebaplar",
+    name: "Kebaplar",
+    icon: "🥩",
+    subtitle: "Köz ateşinde pişen nefis zırh kebapları ve ızgaralar."
+  },
+  {
+    id: "pideler",
+    name: "Pideler",
+    icon: "🥖",
+    subtitle: "Taş fırından çıtır çıtır pide ve lahmacun çeşitleri."
+  },
+  {
+    id: "corba",
+    name: "Çorba",
+    icon: "🥣",
+    subtitle: "Geleneksel usulde kaynayan sıcak ve şifalı çorba."
   },
   {
     id: "tatli",
     name: "Tatlı",
     icon: "🍰",
-    subtitle: "Yemeğin üstüne tatlı bir kapanış."
+    subtitle: "Yemeğin üstüne tatlı ve sıcak bir kapanış."
   },
   {
     id: "icecekler",
     name: "İçecekler",
     icon: "🥤",
-    subtitle: "Yemeklerin yanına ferahlatıcı içecekler."
+    subtitle: "Yemeklerin yanına eşlik eden ferahlatıcı içecekler."
   }
 ];
 
 // ==========================================
-// 3. MERKEZİ ÜRÜN VERİ YAPISI (Tahmini Fiyatlar & Örnek Görseller)
+// 3. MERKEZİ ÜRÜN VERİ YAPISI (menuData)
 // ==========================================
-// NOT: Aşağıdaki fiyatlar ve görseller şimdilik tahmini/örnek olarak eklenmiştir.
-// Gerçek menü geldiğinde fiyatları (örn. "30 TL") ve görsel yollarını (örn. "images/simit.jpg")
-// doğrudan buradan değiştirebilirsiniz.
 const menuData = {
   // 1. TAŞ FIRINDAN
   tasFirindan: [
     {
       name: "Simit",
-      description: "Geleneksel lezzet, taş fırından.",
+      description: "Geleneksel lezzet, taş fırından günlük taze.",
       price: "25 TL",
       image: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=400&q=80"
     },
@@ -69,105 +78,191 @@ const menuData = {
     },
     {
       name: "Karışık Simit",
-      description: "Susam, çörekotu ve daha fazlası.",
+      description: "Susam, çörekotu ve zengin tohum harmanı.",
       price: "50 TL",
       image: "https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Tereyağlı Simit",
-      description: "Mis gibi tereyağı ile.",
+      description: "Halis tereyağı lezzetiyle fırından yeni çıkmış.",
       price: "45 TL",
       image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Poğaça ve Çeşitleri",
-      description: "Her damak tadına uygun, günlük taze.",
+      description: "Her damak tadına uygun, peynirli, zeytinli ve sade günlük taze.",
       price: "35 TL",
       image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80"
     }
   ],
 
-  // 2. ASPAVA
-  aspava: [
+  // 2. KEBAPLAR
+  kebaplar: [
     {
-      name: "Pide",
-      description: "Taş fırında pişen çıtır kıymalı ve kaşarlı pide.",
-      price: "280 TL",
-      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      name: "Lahmacun",
-      description: "İnce çıtır hamur, zırh kıyması, yeşillik ve limon ile.",
-      price: "110 TL",
-      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      name: "Adana",
-      description: "Közde pişen nefis zırh kıyması kebabı, köz sebzelerle.",
-      price: "380 TL",
+      name: "Adana Kebap",
+      description: "Közde pişen nefis zırh kıyması kebabı, köz sebzeler ve tırnak pide ile.",
+      price: "400 TL",
       image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
     },
     {
-      name: "Kanat",
-      description: "Özel marineli közde ızgara tavuk kanat.",
-      price: "320 TL",
-      image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=400&q=80"
+      name: "Urfa Kebap",
+      description: "Özel baharat harmanıyla yoğrulmuş acısız zırh kıyması kebabı.",
+      price: "400 TL",
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80"
     },
     {
-      name: "Köfte",
-      description: "Geleneksel lezzette zırh kasap köftesi.",
-      price: "340 TL",
+      name: "Izgara Köfte",
+      description: "Özel kasap harcıyla yoğrulmuş geleneksel lezzette ızgara köfte.",
+      price: "400 TL",
       image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Kanat",
+      description: "Özel marineli köz ateşinde nar gibi kızarmış çıtır tavuk kanat.",
+      price: "375 TL",
+      image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=400&q=80"
     }
   ],
 
-  // 3. TATLI
+  // 3. PİDELER
+  pideler: [
+    {
+      name: "Kıymalı Pide",
+      description: "Taş fırında taze pişen tereyağlı kıymalı çıtır pide.",
+      price: "320 TL",
+      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Kuşbaşılı Pide",
+      description: "Özel marine dana eti, domates ve biber harcıyla taş fırında pişirilir.",
+      price: "375 TL",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Kaşarlı Pide",
+      description: "Bol eriyen kaşar peyniri ve tereyağı kenarlı çıtır pide.",
+      price: "375 TL",
+      image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Karışık Pide",
+      description: "Kuşbaşı et, kıyma, sucuk ve bol kaşar peynirinin enfes buluşması.",
+      price: "420 TL",
+      image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Kuşbaşılı Kaşarlı Pide",
+      description: "Özel marine kuşbaşı dana eti ve eriyen kaşar peyniri bir arada.",
+      price: "400 TL",
+      image: "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Kıymalı Kaşarlı Pide",
+      description: "Baharatlı lezzetli kıyma harcı ve bol uzayan kaşar peyniri.",
+      price: "350 TL",
+      image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Beyaz Peynirli Pide",
+      description: "Halis yöresel beyaz peynir ve taze maydanoz harcıyla nefis fırın lezzeti.",
+      price: "300 TL",
+      image: "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Lahmacun",
+      description: "İncecik çıtır hamur, zırh kıyması, taze yeşillik ve limon eşliğinde.",
+      price: "200 TL",
+      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Antep Lahmacun",
+      description: "Özel sarımsaklı ve baharatlı Antep usulü çıtır lahmacun.",
+      price: "225 TL",
+      image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+
+  // 4. ÇORBA
+  corba: [
+    {
+      name: "Çorba",
+      description: "Köy tereyağlı özel sosu ve limon ile günlük taze sıcak çorba.",
+      price: "150 TL",
+      image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80"
+    }
+  ],
+
+  // 5. TATLI
   tatli: [
     {
       name: "Künefe",
-      description: "Sıcak şerbetli, halis peynirli ve bol Antep fıstıklı.",
-      price: "180 TL",
+      description: "Sıcak şerbetli, halis tuzsuz peynirli ve bol Antep fıstıklı çıtır künefe.",
+      price: "200 TL",
       image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=80"
     }
   ],
 
-  // 4. İÇECEKLER
+  // 6. İÇECEKLER
   icecekler: [
     {
-      name: "Kola",
+      name: "Cola",
       description: "Soğuk kutu meşrubat.",
-      price: "55 TL",
+      price: "80 TL",
       image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Fanta",
       description: "Soğuk kutu portakallı gazoz.",
-      price: "55 TL",
+      price: "80 TL",
       image: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?auto=format&fit=crop&w=400&q=80"
     },
     {
-      name: "Ayran",
-      description: "Bol köpüklü taze yayık ayranı.",
+      name: "M. Suyu Çeşitleri",
+      description: "Soğuk ferahlatıcı kutu meyve suları ve buzlu çay.",
       price: "40 TL",
-      image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=400&q=80"
-    },
-    {
-      name: "Fuse Tea",
-      description: "Soğuk ferahlatıcı şeftali / limon buzlu çay.",
-      price: "55 TL",
       image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=400&q=80"
     },
     {
-      name: "Soda",
-      description: "Doğal zengin mineralli maden suyu.",
-      price: "35 TL",
-      image: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=400&q=80"
+      name: "B. Ayran",
+      description: "Bol köpüklü büyük boy taze yayık ayran.",
+      price: "70 TL",
+      image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "K. Ayran",
+      description: "Taze ferahlatıcı küçük boy ayran.",
+      price: "40 TL",
+      image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Şalgam",
+      description: "Geleneksel mayalanmış acılı / acısız şalgam suyu.",
+      price: "70 TL",
+      image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Su",
       description: "Doğal kaynak suyu.",
       price: "20 TL",
       image: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Çay",
+      description: "Taze demlenmiş sıcak ince belli bardak çay.",
+      price: "25 TL",
+      image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Soda",
+      description: "Doğal zengin mineralli maden suyu.",
+      price: "25 TL",
+      image: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=400&q=80"
+    },
+    {
+      name: "Nescafe",
+      description: "Sıcak lezzetli hazır kahve.",
+      price: "50 TL",
+      image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
     }
   ]
 };
@@ -208,7 +303,7 @@ function initHeaderAndFooter() {
 }
 
 /**
- * Üstteki 4 adet yatay kategori butonunu render eder
+ * Üstteki yatay kategori butonlarını render eder
  */
 function renderCategoryNavigation() {
   const categoryNav = document.getElementById("category-nav");
@@ -237,7 +332,7 @@ function renderCategoryNavigation() {
 }
 
 /**
- * 4 kategorinin tamamını ve ürün kartlarını render eder
+ * Tüm kategorileri ve ürün kartlarını render eder
  */
 function renderAllSections() {
   const menuContainer = document.getElementById("menu-container");
