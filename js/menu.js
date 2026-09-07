@@ -68,31 +68,31 @@ const menuData = {
       name: "Simit",
       description: "Geleneksel lezzet, taş fırından günlük taze.",
       price: "25 TL",
-      image: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/simit.jpg"
     },
     {
       name: "Kaşarlı Simit",
       description: "Bol kaşar ile fırında özel lezzet.",
       price: "55 TL",
-      image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kasarli-simit.jpg"
     },
     {
       name: "Karışık Simit",
       description: "Susam, çörekotu ve zengin tohum harmanı.",
       price: "50 TL",
-      image: "https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/karisik-simit.jpg"
     },
     {
       name: "Tereyağlı Simit",
       description: "Halis tereyağı lezzetiyle fırından yeni çıkmış.",
       price: "45 TL",
-      image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/tereyagli-simit.jpg"
     },
     {
       name: "Poğaça ve Çeşitleri",
       description: "Her damak tadına uygun, peynirli, zeytinli ve sade günlük taze.",
       price: "35 TL",
-      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/pogaca.jpg"
     }
   ],
 
@@ -102,25 +102,25 @@ const menuData = {
       name: "Adana Kebap",
       description: "Közde pişen nefis zırh kıyması kebabı, köz sebzeler ve tırnak pide ile.",
       price: "400 TL",
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/adana-kebap.jpg"
     },
     {
       name: "Urfa Kebap",
       description: "Özel baharat harmanıyla yoğrulmuş acısız zırh kıyması kebabı.",
       price: "400 TL",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/urfa-kebap.jpg"
     },
     {
       name: "Izgara Köfte",
       description: "Özel kasap harcıyla yoğrulmuş geleneksel lezzette ızgara köfte.",
       price: "400 TL",
-      image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/izgara-kofte.jpg"
     },
     {
       name: "Kanat",
       description: "Özel marineli köz ateşinde nar gibi kızarmış çıtır tavuk kanat.",
       price: "375 TL",
-      image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kanat.jpg"
     }
   ],
 
@@ -130,55 +130,55 @@ const menuData = {
       name: "Kıymalı Pide",
       description: "Taş fırında taze pişen tereyağlı kıymalı çıtır pide.",
       price: "320 TL",
-      image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kiymali-pide.jpg"
     },
     {
       name: "Kuşbaşılı Pide",
       description: "Özel marine dana eti, domates ve biber harcıyla taş fırında pişirilir.",
       price: "375 TL",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kusbasili-pide.jpg"
     },
     {
       name: "Kaşarlı Pide",
       description: "Bol eriyen kaşar peyniri ve tereyağı kenarlı çıtır pide.",
       price: "375 TL",
-      image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kasarli-pide.jpg"
     },
     {
       name: "Karışık Pide",
       description: "Kuşbaşı et, kıyma, sucuk ve bol kaşar peynirinin enfes buluşması.",
       price: "420 TL",
-      image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/karisik-pide.jpg"
     },
     {
       name: "Kuşbaşılı Kaşarlı Pide",
       description: "Özel marine kuşbaşı dana eti ve eriyen kaşar peyniri bir arada.",
       price: "400 TL",
-      image: "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kusbasili-kasarli-pide.jpg"
     },
     {
       name: "Kıymalı Kaşarlı Pide",
       description: "Baharatlı lezzetli kıyma harcı ve bol uzayan kaşar peyniri.",
       price: "350 TL",
-      image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kiymali-kasarli-pide.jpg"
     },
     {
       name: "Beyaz Peynirli Pide",
       description: "Halis yöresel beyaz peynir ve taze maydanoz harcıyla nefis fırın lezzeti.",
       price: "300 TL",
-      image: "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/beyaz-peynirli-pide.jpg"
     },
     {
       name: "Lahmacun",
       description: "İncecik çıtır hamur, zırh kıyması, taze yeşillik ve limon eşliğinde.",
       price: "200 TL",
-      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/lahmacun.jpg"
     },
     {
       name: "Antep Lahmacun",
       description: "Özel sarımsaklı ve baharatlı Antep usulü çıtır lahmacun.",
       price: "225 TL",
-      image: "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/antep-lahmacun.jpg"
     }
   ],
 
@@ -188,7 +188,7 @@ const menuData = {
       name: "Çorba",
       description: "Köy tereyağlı özel sosu ve limon ile günlük taze sıcak çorba.",
       price: "150 TL",
-      image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/corba.jpg"
     }
   ],
 
@@ -198,7 +198,7 @@ const menuData = {
       name: "Künefe",
       description: "Sıcak şerbetli, halis tuzsuz peynirli ve bol Antep fıstıklı çıtır künefe.",
       price: "200 TL",
-      image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kunefe.jpg"
     }
   ],
 
@@ -208,61 +208,61 @@ const menuData = {
       name: "Cola",
       description: "Soğuk kutu meşrubat.",
       price: "80 TL",
-      image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/cola.jpg"
     },
     {
       name: "Fanta",
       description: "Soğuk kutu portakallı gazoz.",
       price: "80 TL",
-      image: "https://images.unsplash.com/photo-1624517452488-04869289c4ca?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/fanta.jpg"
     },
     {
       name: "M. Suyu Çeşitleri",
       description: "Soğuk ferahlatıcı kutu meyve suları ve buzlu çay.",
       price: "40 TL",
-      image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/meyve-suyu.jpg"
     },
     {
       name: "B. Ayran",
       description: "Bol köpüklü büyük boy taze yayık ayran.",
       price: "70 TL",
-      image: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/buyuk-ayran.jpg"
     },
     {
       name: "K. Ayran",
       description: "Taze ferahlatıcı küçük boy ayran.",
       price: "40 TL",
-      image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/kucuk-ayran.jpg"
     },
     {
       name: "Şalgam",
       description: "Geleneksel mayalanmış acılı / acısız şalgam suyu.",
       price: "70 TL",
-      image: "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/salgam.jpg"
     },
     {
       name: "Su",
       description: "Doğal kaynak suyu.",
       price: "20 TL",
-      image: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/su.jpg"
     },
     {
       name: "Çay",
       description: "Taze demlenmiş sıcak ince belli bardak çay.",
       price: "25 TL",
-      image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/cay.jpg"
     },
     {
       name: "Soda",
       description: "Doğal zengin mineralli maden suyu.",
       price: "25 TL",
-      image: "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/soda.jpg"
     },
     {
       name: "Nescafe",
       description: "Sıcak lezzetli hazır kahve.",
       price: "50 TL",
-      image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80"
+      image: "images/items/nescafe.jpg"
     }
   ]
 };
@@ -324,7 +324,6 @@ function renderCategoryNavigation() {
 
     btn.addEventListener("click", () => {
       scrollToCategory(cat.id);
-      setActiveCategoryButton(cat.id);
     });
 
     categoryNav.appendChild(btn);
@@ -395,6 +394,31 @@ function renderAllSections() {
   });
 }
 
+// ==========================================
+// 5. KAYDIRMA (SCROLL) & SCROLLSPY KONTROLÜ
+// ==========================================
+let isClickScrolling = false;
+let clickScrollTimeout = null;
+
+// Mobil dokunma veya mouse tekerleği algılandığında kilidi hemen aç
+window.addEventListener("touchstart", () => {
+  isClickScrolling = false;
+  clearTimeout(clickScrollTimeout);
+}, { passive: true });
+
+window.addEventListener("wheel", () => {
+  isClickScrolling = false;
+  clearTimeout(clickScrollTimeout);
+}, { passive: true });
+
+// Modern tarayıcılarda kaydırma bittiğinde kilidi kaldır
+if ("onscrollend" in window) {
+  window.addEventListener("scrollend", () => {
+    isClickScrolling = false;
+    clearTimeout(clickScrollTimeout);
+  });
+}
+
 /**
  * İlgili kategoriye yumuşak kaydırma
  */
@@ -402,7 +426,14 @@ function scrollToCategory(categoryId) {
   const targetSection = document.getElementById(`section-${categoryId}`);
   if (!targetSection) return;
 
-  const headerOffset = 90; // Sabit kategori barı payı
+  // Tıklama ile kaydırma başladığında ScrollSpy'ı geçici olarak kilitle
+  isClickScrolling = true;
+  clearTimeout(clickScrollTimeout);
+
+  // Hedef butonu hemen aktif yap ve ortala
+  setActiveCategoryButton(categoryId);
+
+  const headerOffset = 80; // Sabit kategori barı payı
   const elementPosition = targetSection.getBoundingClientRect().top;
   const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -410,6 +441,11 @@ function scrollToCategory(categoryId) {
     top: offsetPosition,
     behavior: "smooth"
   });
+
+  // Kaydırma süresi boyunca (900ms) ScrollSpy'ın aradaki kategorilere zıplamasını engelle
+  clickScrollTimeout = setTimeout(() => {
+    isClickScrolling = false;
+  }, 900);
 }
 
 /**
@@ -421,8 +457,11 @@ function setActiveCategoryButton(categoryId) {
 
   buttons.forEach(btn => {
     if (btn.dataset.category === categoryId) {
+      const wasActive = btn.classList.contains("active");
       btn.classList.add("active");
-      if (navContainer) {
+
+      // Yalnızca aktiflik yeni değiştiyse kategori çubuğunu kaydır (titremeyi önler)
+      if (navContainer && !wasActive) {
         const leftPos = btn.offsetLeft - (navContainer.clientWidth / 2) + (btn.clientWidth / 2);
         navContainer.scrollTo({ left: leftPos, behavior: "smooth" });
       }
@@ -433,30 +472,53 @@ function setActiveCategoryButton(categoryId) {
 }
 
 /**
- * Sayfa kaydırıldıkça hangi kategorinin görünür olduğunu izleyen ScrollSpy
+ * Sayfa elle kaydırıldıkça hangi kategorinin görünür olduğunu izleyen ScrollSpy
  */
 function setupCategoryScrollSpy() {
   let isThrottled = false;
 
   window.addEventListener("scroll", () => {
+    // Kullanıcı bir kategori butonuna tıkladıysa ScrollSpy araya girmez
+    if (isClickScrolling) return;
+
     if (isThrottled) return;
     isThrottled = true;
 
-    setTimeout(() => {
+    requestAnimationFrame(() => {
+      if (isClickScrolling) {
+        isThrottled = false;
+        return;
+      }
+
       const sections = document.querySelectorAll(".category-section");
-      const scrollPosition = window.pageYOffset + 120;
+      if (!sections.length) {
+        isThrottled = false;
+        return;
+      }
+
+      // Sayfa en aşağıya indiğinde (son kategori için)
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 50) {
+        const lastId = sections[sections.length - 1].id.replace("section-", "");
+        setActiveCategoryButton(lastId);
+        isThrottled = false;
+        return;
+      }
+
+      // Kategori tespit çizgisi (sticky header payı)
+      const detectionPoint = window.pageYOffset + 95;
+      let currentCategory = "";
 
       sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.id.replace("section-", "");
-
-        if (scrollPosition >= top && scrollPosition < top + height) {
-          setActiveCategoryButton(id);
+        if (detectionPoint >= section.offsetTop) {
+          currentCategory = section.id.replace("section-", "");
         }
       });
 
+      if (currentCategory) {
+        setActiveCategoryButton(currentCategory);
+      }
+
       isThrottled = false;
-    }, 60);
+    });
   }, { passive: true });
 }
