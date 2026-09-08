@@ -66,33 +66,39 @@ const menuData = {
   tasFirindan: [
     {
       name: "Simit",
-      description: "Geleneksel lezzet, taş fırından günlük taze.",
-      price: "25 TL",
+      description: "Bol susamlı, çıtır gevrek geleneksel taş fırın simidi.",
+      price: "20 TL",
       image: "images/items/simit.jpg"
     },
     {
       name: "Kaşarlı Simit",
-      description: "Bol kaşar ile fırında özel lezzet.",
-      price: "55 TL",
+      description: "Taş fırında eriyen bol kaşar peyniriyle fırınlanmış sıcak lezzet.",
+      price: "75 TL",
       image: "images/items/kasarli-simit.jpg"
     },
     {
       name: "Karışık Simit",
-      description: "Susam, çörekotu ve zengin tohum harmanı.",
-      price: "50 TL",
+      description: "Taş fırında eriyen kaşar peyniri, domates, biber ve zeytin ile zengin karışık fırın lezzeti.",
+      price: "75 TL",
       image: "images/items/karisik-simit.jpg"
     },
     {
       name: "Tereyağlı Simit",
-      description: "Halis tereyağı lezzetiyle fırından yeni çıkmış.",
-      price: "45 TL",
+      description: "Halis tereyağı lezzetiyle fırından yeni çıkmış çıtır simit.",
+      price: "30 TL",
       image: "images/items/tereyagli-simit.jpg"
     },
     {
       name: "Poğaça ve Çeşitleri",
-      description: "Her damak tadına uygun, peynirli, zeytinli ve sade günlük taze.",
-      price: "35 TL",
+      description: "Peynirli, patatesli, zeytinli ve sade günlük taze taş fırın poğaçası.",
+      price: "30 TL",
       image: "images/items/pogaca.jpg"
+    },
+    {
+      name: "Açma",
+      description: "Yumuşacık dokusu ve tereyağlı lezzetiyle günlük taze taş fırın açması.",
+      price: "35 TL",
+      image: "images/items/acma.jpg"
     }
   ],
 
@@ -121,6 +127,18 @@ const menuData = {
       description: "Özel marineli köz ateşinde nar gibi kızarmış çıtır tavuk kanat.",
       price: "375 TL",
       image: "images/items/kanat.jpg"
+    },
+    {
+      name: "Kiremit Köfte",
+      description: "Taş fırında tereyağlı domates sosu ve eriyen kaşar peyniriyle fırınlanan kiremitte köfte.",
+      price: "450 TL",
+      image: "images/items/kiremit-kofte.jpg"
+    },
+    {
+      name: "Kiremit Mantar",
+      description: "Taş fırında tereyağı, sarımsak ve kaşar peyniri ile güveçte fırınlanmış taze mantar.",
+      price: "175 TL",
+      image: "images/items/kiremit-mantar.jpg"
     }
   ],
 
@@ -146,7 +164,7 @@ const menuData = {
     },
     {
       name: "Karışık Pide",
-      description: "Kuşbaşı et, kıyma, sucuk ve bol kaşar peynirinin enfes buluşması.",
+      description: "Özel marine kuşbaşı et, zırh kıyması, bol kaşar peyniri ve taze yumurta ile çıtır taş fırın lezzeti.",
       price: "420 TL",
       image: "images/items/karisik-pide.jpg"
     },
@@ -185,10 +203,16 @@ const menuData = {
   // 4. ÇORBA
   corba: [
     {
-      name: "Çorba",
-      description: "Köy tereyağlı özel sosu ve limon ile günlük taze sıcak çorba.",
+      name: "Mercimek Çorbası",
+      description: "Özel tereyağlı sosu, yanında taş fırın taze ekmek ve limon ile servis edilir.",
       price: "150 TL",
       image: "images/items/corba.jpg"
+    },
+    {
+      name: "Ezogelin Çorbası",
+      description: "Geleneksel mercimek, bulgur ve nane harmanı; yanında taş fırın taze ekmek ve limon ile.",
+      price: "150 TL",
+      image: "images/items/ezogelin.jpg"
     }
   ],
 
@@ -196,7 +220,7 @@ const menuData = {
   tatli: [
     {
       name: "Künefe",
-      description: "Sıcak şerbetli, halis tuzsuz peynirli ve bol Antep fıstıklı çıtır künefe.",
+      description: "Sıcak şerbetli ve halis tuzsuz peynirli çıtır künefe.",
       price: "200 TL",
       image: "images/items/kunefe.jpg"
     }
@@ -224,13 +248,13 @@ const menuData = {
     },
     {
       name: "B. Ayran",
-      description: "Bol köpüklü büyük boy taze yayık ayran.",
+      description: "Standart kapalı paket soğuk taze ayran.",
       price: "70 TL",
       image: "images/items/buyuk-ayran.jpg"
     },
     {
       name: "K. Ayran",
-      description: "Taze ferahlatıcı küçük boy ayran.",
+      description: "Standart kapalı paket soğuk taze ayran.",
       price: "40 TL",
       image: "images/items/kucuk-ayran.jpg"
     },
@@ -347,12 +371,15 @@ function renderAllSections() {
     section.className = "category-section";
     section.id = `section-${cat.id}`;
 
-    // Kategori Başlık Bloğu
+    // Kategori Başlık Bloğu (QoL: Ürün Sayısı Rozeti Eklendi)
     section.innerHTML = `
       <div class="category-header">
         <div class="category-header-main">
-          <span class="cat-icon">${cat.icon}</span>
-          <h2 class="cat-title">${cat.name}</h2>
+          <div class="category-title-group">
+            <span class="cat-icon">${cat.icon}</span>
+            <h2 class="cat-title">${cat.name}</h2>
+          </div>
+          <span class="cat-count-badge">${products.length} Çeşit</span>
         </div>
         <div class="category-sub-row">
           <p class="cat-subtitle">${cat.subtitle}</p>
@@ -369,7 +396,7 @@ function renderAllSections() {
       card.className = "product-card";
 
       card.innerHTML = `
-        <div class="product-image-box">
+        <div class="product-image-box" title="Fotoğrafı büyütmek için dokunun">
           <img 
             src="${product.image}" 
             alt="${product.name}" 
@@ -377,6 +404,14 @@ function renderAllSections() {
             class="product-img"
             onerror="this.onerror=null; this.src='images/placeholder.svg';"
           />
+          <span class="zoom-badge">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </span>
         </div>
         <div class="product-info">
           <h3 class="product-name">${product.name}</h3>
@@ -387,12 +422,56 @@ function renderAllSections() {
         </div>
       `;
 
+      // QoL: Fotoğrafa tıklayınca tam boy modal aç
+      const imgBox = card.querySelector(".product-image-box");
+      if (imgBox) {
+        imgBox.addEventListener("click", () => {
+          openImageModal(product);
+        });
+      }
+
       productsList.appendChild(card);
     });
 
     menuContainer.appendChild(section);
   });
 }
+
+// ==========================================
+// 5. GÖRSEL BÜYÜTME MODALI (Quality of Life)
+// ==========================================
+function openImageModal(product) {
+  const modal = document.getElementById("image-modal");
+  const modalImg = document.getElementById("modal-img");
+  const modalTitle = document.getElementById("modal-title");
+  const modalPrice = document.getElementById("modal-price");
+  const modalDesc = document.getElementById("modal-desc");
+
+  if (!modal || !modalImg) return;
+
+  modalImg.src = product.image;
+  modalImg.alt = product.name;
+  if (modalTitle) modalTitle.textContent = product.name;
+  if (modalPrice) modalPrice.textContent = product.price;
+  if (modalDesc) modalDesc.textContent = product.description;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeImageModal(e) {
+  if (e) e.stopPropagation();
+  const modal = document.getElementById("image-modal");
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+}
+
+// ESC tuşuna basınca modalı kapat
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeImageModal();
+});
 
 // ==========================================
 // 5. KAYDIRMA (SCROLL) & SCROLLSPY KONTROLÜ
@@ -521,4 +600,16 @@ function setupCategoryScrollSpy() {
       isThrottled = false;
     });
   }, { passive: true });
+
+  // QoL: Başa Dön Butonu Görünürlük Kontrolü
+  const btt = document.getElementById("back-to-top");
+  if (btt) {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        btt.classList.add("visible");
+      } else {
+        btt.classList.remove("visible");
+      }
+    }, { passive: true });
+  }
 }
